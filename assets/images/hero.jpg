@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121212"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <!-- Border & Frame -->
+  <rect x="20" y="20" width="1880" height="1040" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Corner Crosshairs -->
+  <path d="M 15 25 L 25 25 M 20 20 L 20 30" stroke="#C8FF00" stroke-width="1.5"/>
+  <path d="M 1895 25 L 1905 25 M 1900 20 L 1900 30" stroke="#C8FF00" stroke-width="1.5"/>
+  <path d="M 15 1055 L 25 1055 M 20 1050 L 20 1060" stroke="#C8FF00" stroke-width="1.5"/>
+  <path d="M 1895 1055 L 1905 1055 M 1900 1050 L 1900 1060" stroke="#C8FF00" stroke-width="1.5"/>
+
+  <!-- Detail Graphic -->
+  
+            <!-- Web Browser Wireframe -->
+            <rect x="480" y="270" width="960" height="486" rx="6" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+            <line x1="480" y1="334.8" x2="1440" y2="334.8" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <circle cx="518.4000000000001" cy="302.40000000000003" r="4" fill="#FF5F56"/>
+            <circle cx="556.8" cy="302.40000000000003" r="4" fill="#FFBD2E"/>
+            <circle cx="595.2" cy="302.40000000000003" r="4" fill="#27C93F"/>
+            <rect x="537.6" y="388.8" width="384" height="32.4" rx="2" fill="#C8FF00" opacity="0.8"/>
+            <rect x="537.6" y="453.59999999999997" width="844.8" height="16.2" rx="1" fill="rgba(255,255,255,0.3)"/>
+            <rect x="537.6" y="486" width="672" height="16.2" rx="1" fill="rgba(255,255,255,0.2)"/>
+            <rect x="537.6" y="540" width="249.60000000000002" height="140.4" rx="4" fill="none" stroke="#C8FF00" stroke-dasharray="2 2" opacity="0.5"/>
+            <rect x="835.2" y="540" width="249.60000000000002" height="140.4" rx="4" fill="none" stroke="#C8FF00" stroke-dasharray="2 2" opacity="0.5"/>
+            <rect x="1132.8" y="540" width="249.60000000000002" height="140.4" rx="4" fill="none" stroke="#C8FF00" stroke-dasharray="2 2" opacity="0.5"/>
+        
+
+  <!-- Typography overlay -->
+  <text x="40" y="55" fill="#C8FF00" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="3">TARUN VERMA // PORTFOLIO ASSET</text>
+  <text x="1880" y="55" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="11" text-anchor="end">1920 × 1080</text>
+
+  <text x="960" y="885.5999999999999" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" letter-spacing="2" text-anchor="middle">TARUN VERMA</text>
+  <text x="960" y="939.6" fill="#C8FF00" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" letter-spacing="4" text-anchor="middle">DESIGN × DIGITAL × DEVELOPMENT</text>
+
+  <!-- Bottom metadata -->
+  <text x="40" y="1045" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="10">SPEC: HIGH-RES CREATIVE ASSET</text>
+  <text x="1880" y="1045" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="10" text-anchor="end">EST. 2024</text>
+</svg>

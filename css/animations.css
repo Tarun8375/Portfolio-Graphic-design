@@ -1,0 +1,326 @@
+/* ============================================================
+   TARUN VERMA PORTFOLIO — ANIMATIONS.CSS
+   GSAP target classes, keyframes, transition utilities
+   ============================================================ */
+
+/* ===== GSAP REVEAL TARGETS ===== */
+/* Elements with these classes are animated by animations.js */
+
+.js-reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.js-reveal-fade {
+    opacity: 0;
+}
+
+.js-reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+.js-reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+.js-reveal-scale {
+    opacity: 0;
+    transform: scale(0.96);
+}
+
+/* SplitType word/line targets */
+.js-split-text .word {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.js-split-text .line {
+    overflow: hidden;
+    display: block;
+}
+
+.js-split-char .char {
+    display: inline-block;
+}
+
+/* ===== CLIP PATH REVEALS ===== */
+.clip-reveal {
+    clip-path: inset(0 0 100% 0);
+}
+
+.clip-reveal.is-revealed {
+    clip-path: inset(0 0 0% 0);
+    transition: clip-path 0.9s var(--ease-out);
+}
+
+/* ===== IMAGE REVEAL WRAPPERS ===== */
+.img-reveal-wrap {
+    overflow: hidden;
+    position: relative;
+}
+
+.img-reveal-wrap::after {
+    display: none;
+}
+
+/* ===== PRELOADER ANIMATION ===== */
+@keyframes preloaderOut {
+    0%   { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100%); opacity: 0; }
+}
+
+.preloader.is-leaving {
+    animation: preloaderOut 0.6s var(--ease-in-out) forwards;
+}
+
+/* ===== PAGE TRANSITION ===== */
+@keyframes curtainIn {
+    0%   { transform: scaleY(0); transform-origin: bottom; }
+    100% { transform: scaleY(1); transform-origin: bottom; }
+}
+
+@keyframes curtainOut {
+    0%   { transform: scaleY(1); transform-origin: top; }
+    100% { transform: scaleY(0); transform-origin: top; }
+}
+
+.page-transition.entering {
+    animation: curtainIn 0.45s var(--ease-in-out) forwards;
+}
+
+.page-transition.leaving {
+    animation: curtainOut 0.45s var(--ease-in-out) forwards;
+}
+
+/* ===== HERO ANIMATIONS ===== */
+.hero__title-inner {
+    display: block;
+    transform: translateY(110%);
+}
+
+/* Initial state — JS will control */
+.hero__label,
+.hero__subtitle,
+.hero__tagline,
+.hero__scroll {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.hero__image-wrapper {
+    opacity: 0;
+    transform: translateX(30px) scale(1.04);
+}
+
+/* ===== MAGNETIC BUTTON ===== */
+.magnetic {
+    position: relative;
+    display: inline-block;
+    will-change: transform;
+}
+
+.magnetic__inner {
+    display: block;
+    transition: transform 0.2s var(--ease-out);
+    will-change: transform;
+}
+
+/* ===== MARQUEE / SCROLLING TEXT ===== */
+.marquee-wrap {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.marquee-track {
+    display: inline-flex;
+    gap: 0;
+    animation: marquee 18s linear infinite;
+    will-change: transform;
+}
+
+.marquee-track:nth-child(2) {
+    animation-delay: -9s;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* ===== PROJECT CARD HOVER EFFECTS ===== */
+.project-card__image-wrap {
+    transition: transform var(--duration-xl) var(--ease-out);
+}
+
+/* Hover line reveal on project name */
+.project-card__name-wrap {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.project-card__name-wrap .line-under {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background: var(--color-accent);
+    transition: width var(--duration-slow) var(--ease-out);
+}
+
+.project-card:hover .project-card__name-wrap .line-under {
+    width: 100%;
+}
+
+/* ===== WORK ITEM STAGGER ===== */
+.work-item {
+    transition: opacity var(--duration-base) var(--ease);
+}
+
+.work-item.is-filtered-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ===== NAV LINK HOVER ===== */
+.nav__link-text {
+    display: block;
+    transition: transform var(--duration-base) var(--ease-out);
+}
+
+.nav__link:hover .nav__link-text {
+    transform: translateY(-2px);
+}
+
+/* ===== STATS COUNTER ===== */
+.stats__number {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.stats__num-val {
+    display: inline-block;
+    will-change: transform;
+}
+
+/* ===== SKILLS HOVER ===== */
+.skills-list__item {
+    transition: color 0.4s var(--ease-out),
+                transform 0.3s var(--ease-out);
+}
+
+.skills-list__item:hover {
+    transform: translateX(8px);
+}
+
+/* ===== TIMELINE DOT ===== */
+.timeline-item__line::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: -2px;
+    width: 5px;
+    height: 0;
+    background: var(--color-accent);
+    transition: height 0.6s var(--ease-out);
+}
+
+.timeline-item.is-active .timeline-item__line::after {
+    height: 100%;
+}
+
+/* ===== FOOTER LINE REVEAL ===== */
+.footer__line {
+    height: 1px;
+    background: var(--color-border);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.footer__line.is-visible {
+    transform: scaleX(1);
+    transition: transform 1.2s var(--ease-out);
+}
+
+/* ===== AVAILABILITY DOT ===== */
+.nav__avail-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    margin-right: 6px;
+    animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* ===== CONTACT FORM FOCUS INDICATOR ===== */
+.form-group::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background: var(--color-accent);
+    transition: width var(--duration-base) var(--ease-out);
+}
+
+.form-group:focus-within::after {
+    width: 100%;
+}
+
+/* ===== LOADING STATE ===== */
+.is-loading {
+    pointer-events: none;
+}
+
+.is-loading * {
+    animation-play-state: paused;
+}
+
+/* ===== REDUCED MOTION OVERRIDES ===== */
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+        animation: none;
+    }
+
+    .js-reveal-up,
+    .js-reveal-fade,
+    .js-reveal-left,
+    .js-reveal-right,
+    .js-reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .hero__label,
+    .hero__subtitle,
+    .hero__tagline,
+    .hero__scroll,
+    .hero__image-wrapper {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .hero__title-inner {
+        transform: none !important;
+    }
+
+    .clip-reveal { clip-path: none; }
+    .img-reveal-wrap::after { display: none; }
+
+    .magnetic { will-change: auto; }
+    .magnetic__inner { transition: none; }
+
+    .nav__avail-dot { animation: none; }
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121212"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <!-- Border & Frame -->
+  <rect x="20" y="20" width="760" height="960" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Corner Crosshairs -->
+  <path d="M 15 25 L 25 25 M 20 20 L 20 30" stroke="#C8FF00" stroke-width="1.5"/>
+  <path d="M 775 25 L 785 25 M 780 20 L 780 30" stroke="#C8FF00" stroke-width="1.5"/>
+  <path d="M 15 975 L 25 975 M 20 970 L 20 980" stroke="#C8FF00" stroke-width="1.5"/>
+  <path d="M 775 975 L 785 975 M 780 970 L 780 980" stroke="#C8FF00" stroke-width="1.5"/>
+
+  <!-- Detail Graphic -->
+  
+            <!-- Editorial Portrait Geometric Placeholder -->
+            <circle cx="400" cy="380" r="70" fill="none" stroke="#C8FF00" stroke-width="1.5" opacity="0.6"/>
+            <path d="M 280 750 C 280 550, 520 550, 520 750" fill="none" stroke="#C8FF00" stroke-width="1.5" opacity="0.6"/>
+            <line x1="240" y1="380" x2="560" y2="380" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <line x1="400" y1="200" x2="400" y2="750" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        
+
+  <!-- Typography overlay -->
+  <text x="40" y="55" fill="#C8FF00" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="3">TARUN VERMA // PORTFOLIO ASSET</text>
+  <text x="760" y="55" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="11" text-anchor="end">800 × 1000</text>
+
+  <text x="400" y="820" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" letter-spacing="2" text-anchor="middle">TARUN VERMA</text>
+  <text x="400" y="870" fill="#C8FF00" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" letter-spacing="4" text-anchor="middle">GRAPHIC DESIGNER & WEB DEVELOPER</text>
+
+  <!-- Bottom metadata -->
+  <text x="40" y="965" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="10">SPEC: HIGH-RES CREATIVE ASSET</text>
+  <text x="760" y="965" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="10" text-anchor="end">EST. 2024</text>
+</svg>

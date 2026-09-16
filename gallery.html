@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Tarun Verma</title>
+    <meta name="description"
+        content="Selected work by Tarun Verma — graphic design, brand identity, apparel graphics, web development and digital campaigns.">
+    <meta name="author" content="Tarun Verma">
+    <link rel="canonical" href="https://tarunverma.design/gallery.html">
+    <meta property="og:title" content="Gallery — Tarun Verma">
+    <meta property="og:description"
+        content="Graphic design, branding, web development and digital work by Tarun Verma.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;1,14..32,300&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <div class="cursor" aria-hidden="true">
+        <div class="cursor__dot"></div>
+        <div class="cursor__circle"></div>
+        <span class="cursor__label"></span>
+    </div>
+
+    <div class="page-transition" aria-hidden="true"></div>
+
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav__logo">TARUN VERMA</a>
+        <div class="nav__right">
+            <span class="nav__live-time" id="liveTime" aria-label="Current time in Noida">NOIDA, IN · --:--:--</span>
+            <button class="nav__sound-btn" id="soundBtn" aria-label="Toggle interaction sound">
+                <span class="sound-icon">🔈</span> Sound
+            </button>
+            <ul class="nav__links" role="list">
+                <li><a href="work.html" class="nav__link is-active">Work</a></li>
+                <li><a href="about.html" class="nav__link">About</a></li>
+                <li><a href="gallery.html" class="nav__link" aria-current="page">Gallery</a></li>
+                <li><a href="contact.html" class="nav__link">Contact</a></li>
+            </ul>
+            <span class="nav__availability">
+                <span class="nav__avail-dot" aria-hidden="true"></span>Available for Projects
+            </span>
+            <button class="nav__menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"
+                aria-controls="mobileNav">
+                <span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="nav__mobile" id="mobileNav" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+        <nav aria-label="Mobile menu">
+            <ul class="nav__mobile-links" role="list">
+                <li><a href="work.html" class="nav__mobile-link">Work</a></li>
+                <li><a href="about.html" class="nav__mobile-link">About</a></li>
+                <li><a href="gallery.html" class="nav__mobile-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav__mobile-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav__mobile-footer">
+            <a href="mailto:tarunverma8860@gmail.com" class="nav__mobile-email">tarunverma8860@gmail.com</a>
+            <span class="nav__mobile-avail">Available for Projects</span>
+        </div>
+    </div>
+
+    <div data-barba="wrapper">
+        <main data-barba="container" data-barba-namespace="work" id="main-content">
+
+            <!-- Work page header -->
+            <header class="work-page">
+                <div class="work-page__header">
+                    <h1 class="work-page__title js-reveal-up">gallery</h1>
+                    <p class="work-page__sub js-reveal-up">
+                        A curated collection of selected work across graphic design, branding, apparel, digital
+                        creatives, and web experiences — exploring different visual directions, ideas, and ways of
+                        turning concepts into purposeful design.
+                    </p>
+                </div>
+            </header>
+
+            <!-- Filter controls -->
+            <div class="gallery">
+                <div class="gallery-box">
+                    <div class="images" id="galleryImages"></div>
+                </div>
+            </div>
+            <!-- Image Preview / Lightbox -->
+            <div class="image-preview" id="imagePreview">
+                <button class="preview-close" id="previewClose" aria-label="Close preview">
+                    &times;
+                </button>
+
+                <div class="preview-content">
+                    <img id="previewImage" src="" alt="Preview">
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer" role="contentinfo">
+                <div class="footer__inner">
+                    <div class="footer__logo">TARUN VERMA</div>
+                    <div class="footer__center">
+                        <span class="footer__role">GRAPHIC DESIGNER</span>
+                        <span class="footer__role">+ WEB DEVELOPER</span>
+                    </div>
+                    <div class="footer__right">
+                        <span class="footer__copy">&copy; 2026</span>
+                        <button class="footer__top-btn" aria-label="Back to top">Back to Top ↑</button>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.10.3/dist/barba.umd.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+<script>
+    const gallery = document.getElementById("galleryImages");
+
+    async function loadGallery() {
+        try {
+            const response = await fetch("./assets/gallery.json");
+
+            if (!response.ok) {
+                throw new Error("gallery.json not found");
+            }
+
+            const images = await response.json();
+
+            gallery.innerHTML = images.map((image, index) => `
+            <div class="gallery-item">
+                <img
+                    src="./assets/${image}"
+                    alt="Tarun Verma creative work ${index + 1}"
+                    loading="lazy"
+                >
+            </div>
+        `).join("");
+
+        } catch (error) {
+            console.error("Gallery Error:", error);
+
+            gallery.innerHTML = `
+            <p>Unable to load gallery.</p>
+        `;
+        }
+    }
+
+    loadGallery();
+    // ================================
+    // IMAGE PREVIEW / LIGHTBOX
+    // ================================
+
+    const imagePreview = document.getElementById("imagePreview");
+    const previewImage = document.getElementById("previewImage");
+    const previewClose = document.getElementById("previewClose");
+
+
+    // Open preview
+    gallery.addEventListener("click", (e) => {
+
+        const image = e.target.closest(".gallery-item img");
+
+        if (!image) return;
+
+        previewImage.src = image.src;
+        previewImage.alt = image.alt;
+
+        imagePreview.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+    });
+
+
+    // Close preview
+    function closePreview() {
+
+        imagePreview.classList.remove("active");
+
+        document.body.style.overflow = "";
+
+        // Clear image after animation
+        setTimeout(() => {
+            if (!imagePreview.classList.contains("active")) {
+                previewImage.src = "";
+            }
+        }, 350);
+    }
+
+
+    previewClose.addEventListener("click", closePreview);
+
+
+    // Click outside image
+    imagePreview.addEventListener("click", (e) => {
+
+        if (e.target === imagePreview) {
+            closePreview();
+        }
+
+    });
+
+
+    // ESC key
+    document.addEventListener("keydown", (e) => {
+
+        if (e.key === "Escape" && imagePreview.classList.contains("active")) {
+            closePreview();
+        }
+
+    });
+
+
+</script>
+
+<style>
+    /* ================================
+   CREATIVE GALLERY
+================================ */
+
+    .gallery {
+        width: 100%;
+        padding: 40px 0;
+    }
+
+    .gallery-box {
+        width: 100%;
+    }
+
+    .images {
+        width: 100%;
+        columns: 4;
+        column-gap: 18px;
+    }
+
+    /* Individual gallery item */
+    .gallery-item {
+        width: 100%;
+        display: inline-block;
+        margin: 0 0 18px;
+        break-inside: avoid;
+        overflow: hidden;
+        position: relative;
+        background: #111;
+    }
+
+    /* Image */
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        transition:
+            transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+            filter 0.6s ease;
+    }
+
+    /* Hover */
+    .gallery-item {
+        cursor: pointer;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.035);
+        filter: brightness(0.85);
+    }
+
+
+    /* ================================
+   TABLET
+================================ */
+
+    @media (max-width: 1200px) {
+
+        .images {
+            columns: 3;
+            column-gap: 16px;
+        }
+
+        .gallery-item {
+            margin-bottom: 16px;
+        }
+    }
+
+
+    /* ================================
+   SMALL TABLET
+================================ */
+
+    @media (max-width: 768px) {
+
+        .gallery {
+            padding: 25px 0;
+        }
+
+        .images {
+            columns: 2;
+            column-gap: 12px;
+        }
+
+        .gallery-item {
+            margin-bottom: 12px;
+        }
+
+        .gallery-item img {
+            transition: transform 0.4s ease;
+        }
+    }
+
+
+    /* ================================
+   MOBILE
+================================ */
+
+    @media (max-width: 480px) {
+
+        .gallery {
+            padding: 20px 0;
+        }
+
+        .images {
+            columns: 2;
+            column-gap: 8px;
+        }
+
+        .gallery-item {
+            margin-bottom: 8px;
+        }
+    }
+
+
+    /* ================================
+   REDUCED MOTION
+================================ */
+
+    @media (prefers-reduced-motion: reduce) {
+
+        .gallery-item img {
+            transition: none;
+        }
+
+        .gallery-item:hover img {
+            transform: none;
+            filter: none;
+        }
+    }
+
+
+    /* ================================
+   IMAGE PREVIEW / LIGHTBOX
+================================ */
+
+    .image-preview {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 40px;
+
+        background: rgba(5, 5, 5, 0.92);
+        backdrop-filter: blur(12px);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition:
+            opacity 0.35s ease,
+            visibility 0.35s ease;
+    }
+
+    .image-preview.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+
+    /* Preview image */
+
+    .preview-content {
+        max-width: 90vw;
+        max-height: 90vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .preview-content img {
+        max-width: 100%;
+        max-height: 90vh;
+
+        width: auto;
+        height: auto;
+
+        object-fit: contain;
+
+        display: block;
+
+        transform: scale(0.94);
+        opacity: 0;
+
+        transition:
+            transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 0.3s ease;
+    }
+
+    .image-preview.active .preview-content img {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+
+    /* Close button */
+
+    .preview-close {
+        position: absolute;
+
+        top: 25px;
+        right: 30px;
+
+        width: 45px;
+        height: 45px;
+
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 50%;
+
+        background: transparent;
+        color: #fff;
+
+        font-size: 28px;
+        line-height: 1;
+
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition:
+            background 0.25s ease,
+            transform 0.25s ease;
+    }
+
+    .preview-close:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: rotate(90deg);
+    }
+
+
+    /* Mobile */
+
+    @media (max-width: 768px) {
+
+        .image-preview {
+            padding: 20px;
+        }
+
+        .preview-content {
+            max-width: 95vw;
+            max-height: 85vh;
+        }
+
+        .preview-content img {
+            max-height: 85vh;
+        }
+
+        .preview-close {
+            top: 15px;
+            right: 15px;
+
+            width: 40px;
+            height: 40px;
+
+            font-size: 24px;
+        }
+    }
+</style>
+
+</html>

@@ -1,0 +1,603 @@
+/* ============================================================
+   TARUN VERMA PORTFOLIO — RESPONSIVE.CSS
+   All breakpoint-specific overrides
+   Mobile-first where practical, desktop corrections below
+   ============================================================ */
+
+/* ===== LARGE DESKTOP — 1920px+ ===== */
+@media (min-width: 1920px) {
+    :root {
+        --container-pad: 80px;
+    }
+
+    .hero__inner {
+        grid-template-columns: 55% 45%;
+    }
+}
+
+/* ===== DESKTOP — 1440px ===== */
+@media (max-width: 1440px) {
+    :root {
+        --container-pad: clamp(1.5rem, 4vw, 4rem);
+    }
+}
+
+/* ===== LAPTOP — 1280px ===== */
+@media (max-width: 1280px) {
+    .hero__inner {
+        grid-template-columns: 58% 42%;
+    }
+
+    .project-card--split .project-card__inner,
+    .project-card--overlay .project-card__inner,
+    .project-card--reverse .project-card__inner {
+        gap: var(--space-5);
+    }
+
+    .stats__inner {
+        gap: var(--space-4);
+    }
+
+    .timeline-item {
+        grid-template-columns: 160px 1px 1fr;
+    }
+
+    .contact-form-section__inner {
+        grid-template-columns: 220px 1fr;
+        gap: var(--space-6);
+    }
+}
+
+/* ===== TABLET — 1024px ===== */
+@media (max-width: 1024px) {
+    /* Nav: show hamburger, hide links + availability badge */
+    .nav__links,
+    .nav__availability {
+        display: none;
+    }
+
+    .nav__menu-btn {
+        display: flex;
+    }
+
+    /* Hero: stack vertically */
+    .hero__inner {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: var(--space-6);
+        align-items: flex-end;
+    }
+
+    .hero__content {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .hero__visual {
+        grid-column: 1;
+        grid-row: 1;
+        justify-content: center;
+    }
+
+    .hero__image-wrapper {
+        max-height: 50vh;
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+
+    .hero__index-text {
+        display: none;
+    }
+
+    /* Intro */
+    .intro__statement {
+        font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    }
+
+    /* Work section — project card layouts collapse */
+    .project-card--split .project-card__inner,
+    .project-card--overlay .project-card__inner,
+    .project-card--reverse .project-card__inner {
+        grid-template-columns: 1fr;
+        min-height: unset;
+    }
+
+    .project-card--split .project-card__image-wrap,
+    .project-card--overlay .project-card__image-wrap,
+    .project-card--reverse .project-card__image-wrap {
+        aspect-ratio: 16/9;
+    }
+
+    /* Stats: 2 columns */
+    .stats__inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CTA strip */
+    .cta-strip__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+    }
+
+    .cta-strip__action {
+        align-items: flex-start;
+    }
+
+    /* Footer */
+    .footer__inner {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .footer__center {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        text-align: left;
+        border-top: 1px solid var(--color-border);
+        padding-top: var(--space-3);
+        margin-top: var(--space-2);
+    }
+
+    /* About */
+    .about-hero {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+    }
+
+    .capability-item {
+        grid-template-columns: 60px 1fr 1fr;
+        gap: var(--space-3);
+    }
+
+    .timeline-item {
+        grid-template-columns: 130px 1px 1fr;
+        gap: var(--space-4);
+    }
+
+    .marketing-block__inner {
+        grid-template-columns: 140px 1fr;
+        gap: var(--space-4);
+    }
+
+    /* Contact */
+    .contact-details__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .contact-form-section__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+    }
+
+    .contact-form-info {
+        position: static;
+    }
+
+    /* Project page */
+    .project-hero {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+    }
+
+    .project-section__inner {
+        grid-template-columns: 160px 1fr;
+        gap: var(--space-5);
+    }
+
+    /* Work grid */
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-item:first-child {
+        grid-column: 1;
+        aspect-ratio: 16/9;
+    }
+
+    .work-item {
+        aspect-ratio: 4/3;
+    }
+}
+
+/* ===== TABLET SMALL — 768px ===== */
+@media (max-width: 768px) {
+    :root {
+        --container-pad: 1.5rem;
+        --space-9: 120px;
+        --space-10: 180px;
+    }
+
+    /* Remove custom cursor completely */
+    .cursor { display: none !important; }
+    body { cursor: auto !important; }
+    button { cursor: pointer !important; }
+    a { cursor: pointer !important; }
+    [role="button"] { cursor: pointer !important; }
+
+    /* Preloader */
+    .preloader__name {
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
+        letter-spacing: 0.2em;
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: 100px;
+        padding-bottom: var(--space-6);
+    }
+
+    .hero__tagline {
+        max-width: 100%;
+        font-size: var(--text-base);
+    }
+
+    /* Introduction */
+    .intro__philosophy {
+        align-items: flex-start;
+    }
+
+    /* Project cards: force full column on tablet */
+    .project-card--full .project-card__image-wrap,
+    .project-card--compact .project-card__image-wrap {
+        aspect-ratio: 16/10;
+    }
+
+    .project-card--compact .project-card__inner {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stats: single column */
+    .stats__inner {
+        grid-template-columns: 1fr;
+    }
+
+    /* Work page header */
+    .work-page__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+    }
+
+    /* About: capabilities collapse */
+    .capability-item {
+        grid-template-columns: 50px 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .capability-item__tools {
+        grid-column: 2;
+    }
+
+    /* Timeline: simplify */
+    .timeline-item {
+        grid-template-columns: 1px 1fr;
+        gap: var(--space-4);
+    }
+
+    .timeline-item__date {
+        display: none;
+    }
+
+    .timeline-item__content::before {
+        content: attr(data-date);
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        color: var(--color-muted);
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    /* Skills list: smaller font */
+    .skills-list__item {
+        font-size: clamp(1.25rem, 5vw, 2rem);
+    }
+
+    .marketing-block__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    /* Contact hero */
+    .contact-hero__heading {
+        font-size: clamp(3rem, 12vw, 7rem);
+        line-height: 0.9;
+    }
+
+    /* Project detail */
+    .project-section__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .project-section__label-col {
+        border-top: 1px solid var(--color-border);
+        padding-top: var(--space-3);
+    }
+
+    .project-info-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Gallery slider */
+    .swiper-project .swiper-slide {
+        width: 85%;
+    }
+
+    /* Work grid: single column */
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-item:first-child {
+        aspect-ratio: 4/3;
+    }
+}
+
+/* ===== MOBILE — 480px ===== */
+@media (max-width: 480px) {
+    :root {
+        --container-pad: 1.25rem;
+        --space-8: 80px;
+        --space-9: 100px;
+    }
+
+    /* Nav */
+    .nav {
+        padding-left: var(--container-pad);
+        padding-right: var(--container-pad);
+    }
+
+    .nav__logo {
+        font-size: 11px;
+        letter-spacing: 0.07em;
+    }
+
+    /* Hero title: full viewport width */
+    .hero__title {
+        letter-spacing: -0.05em;
+    }
+
+    /* Intro statement */
+    .intro__statement {
+        max-width: 100%;
+        font-size: clamp(1.4rem, 5.5vw, 2rem);
+    }
+
+    /* Work section header */
+    .work-section__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+    }
+
+    /* Project card meta */
+    .project-card__header {
+        flex-wrap: wrap;
+    }
+
+    /* Stats */
+    .stats__number {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+
+    /* CTA */
+    .cta-strip__heading {
+        font-size: clamp(2.5rem, 12vw, 5rem);
+    }
+
+    /* Footer */
+    .footer__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .footer__center {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .footer__right {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: var(--space-3);
+    }
+
+    /* About hero */
+    .about-hero {
+        gap: var(--space-4);
+        padding-bottom: var(--space-5);
+    }
+
+    /* Capabilities: stacked */
+    .capability-item {
+        grid-template-columns: 1fr;
+        gap: var(--space-2);
+    }
+
+    .capability-item__num { display: none; }
+
+    /* Project info */
+    .project-info-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact hero */
+    .contact-hero__heading {
+        font-size: clamp(2.5rem, 14vw, 5rem);
+    }
+
+    /* Contact actions */
+    .contact-action-btn {
+        padding: var(--space-2) var(--space-3);
+        font-size: var(--text-xs);
+    }
+
+    /* Gallery */
+    .swiper-project .swiper-slide {
+        width: 92%;
+    }
+
+    /* Project next: stack */
+    .project-next__inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-next__link {
+        text-align: left;
+    }
+
+    .project-next__name {
+        font-size: clamp(1.25rem, 6vw, 2rem);
+    }
+
+    /* Mobile nav links: larger touch targets */
+    .nav__mobile-link {
+        padding: var(--space-2) 0;
+    }
+}
+
+/* ===== SMALL MOBILE — 375px ===== */
+@media (max-width: 375px) {
+    :root {
+        --container-pad: 1rem;
+    }
+
+    .hero__label {
+        font-size: 9px;
+        letter-spacing: 0.1em;
+    }
+
+    .hero__subtitle-role {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+    }
+
+    .nav__availability {
+        display: none;
+    }
+
+    .project-card__link {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+
+    .work-filter {
+        gap: var(--space-2);
+    }
+
+    .work-filter__btn {
+        padding: 6px 14px;
+    }
+}
+
+/* ===== VERY SMALL MOBILE — 320px ===== */
+@media (max-width: 320px) {
+    :root {
+        --container-pad: 0.875rem;
+    }
+
+    .hero__tagline {
+        font-size: 0.9rem;
+    }
+
+    .contact-hero__heading {
+        font-size: clamp(2rem, 16vw, 4rem);
+    }
+}
+
+/* ===== HOVER ONLY — for true hover-capable devices ===== */
+@media (hover: none) {
+    /* Remove cursor-dependent hover interactions on touch devices */
+    .project-card__image:hover,
+    .work-item__image:hover,
+    .gallery-slide img:hover {
+        transform: none;
+    }
+
+    /* Make work item overlay always visible on touch */
+    .work-item__overlay {
+        background: rgba(13,13,13, 0.5);
+    }
+
+    .work-item__name,
+    .work-item__cat {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* Skills: no translateX on touch */
+    .skills-list__item:hover {
+        transform: none;
+    }
+
+    /* Swiper: enable momentum on touch */
+    .swiper-project {
+        touch-action: pan-y;
+    }
+}
+
+/* ===== PRINT ===== */
+@media print {
+    .cursor,
+    .grain-overlay,
+    .preloader,
+    .nav__menu-btn,
+    .nav__mobile,
+    .page-transition {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .nav {
+        position: relative;
+        background: white;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .project-card__image-wrap,
+    .hero__image-wrapper {
+        break-inside: avoid;
+    }
+}
+
+/* ===== NEW INTERACTIVE COMPONENTS RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+    .nav__live-time {
+        display: none;
+    }
+
+    .about-hero__visual {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+    }
+
+    .showreel-modal__container {
+        aspect-ratio: 16 / 9;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav__sound-btn {
+        padding: 4px 8px;
+        font-size: 9px;
+    }
+
+    .hero__award-pill {
+        font-size: 9px;
+        padding: 4px 10px;
+    }
+}
+
